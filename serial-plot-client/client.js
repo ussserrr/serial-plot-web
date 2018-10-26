@@ -31,7 +31,7 @@ function parseInts32LE(hexString) {
  *  WebSocket client section
  */
 const webSocketPort = 1200;
-const socket = new WebSocket('ws://192.168.1.214:' + webSocketPort);
+const socket = new WebSocket('ws://localhost:' + webSocketPort);
 socket.addEventListener('open', function(event) {
   console.log("web socket is open on client");
   socket.send("start");  // send something to start getting values

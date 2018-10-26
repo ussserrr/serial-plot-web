@@ -1,5 +1,4 @@
 # Serial-plot-web
-Real-time plotting of data from serial port using Node.js
 ![cover](/serial-plot-smoothie/cover.png)
 
 

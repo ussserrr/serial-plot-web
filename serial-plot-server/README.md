@@ -1,5 +1,3 @@
-# Real-time plot from serial port (server side)
-
 ## Installation
 Run `npm install` to install dependencies.
 

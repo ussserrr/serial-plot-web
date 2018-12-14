@@ -4,17 +4,20 @@
 
 ## Architecture
 Project consists of 3 parts:
- * server (`serial-plot-server`)
-  - responsible for serial port communication (npm' `serialport` package)
-  - WebSocket server to deliver serial port data (npm' `ws`)
-  - Web Server for clients to connect (`express`)
- * client (`serial-plot-client`)
-  - WebSocket to receive data from server (native JS support)
-  - parsing of this data (can be modified to delegate this task to the server)
-  - function to be repeat for redrawing
-  - (optional) simple benchmark to measure a number of points in 1 second
- * one of renderers (Epoch, Smoothie or Chart.js at the moment)
-  - serve package-specific stuff
+
+  - server (`serial-plot-server`)
+    - responsible for the serial port communication (npm' `serialport` package)
+    - WebSocket server to deliver serial port data (npm' `ws`)
+    - Web Server for clients to connect (`express`)
+  
+  - client (`serial-plot-client`)
+    - WebSocket to receive data from the server (native JS support)
+    - parsing of this data (such behavior can be modified to delegate this task to the server)
+    - function to be repeat for redrawing
+    - (optional) simple benchmark to measure a number of points in 1 second
+
+  - one of renderers (Epoch, Smoothie or Chart.js at the moment)
+    - serve package-specific stuff
 
 
 ## Serial communication
@@ -38,8 +41,8 @@ There are also another known charting and plotting libraries but they were not b
 
 
 ## TODOs
-- [ ] dedicated 'public' folder
-- [ ] demo mode (simulate serial connection)
+- [ ] dedicated 'public' directory (with allowed for clients content)
+- [ ] demo mode (simulate the serial connection when it is not present)
 - [ ] grid of plots MxN (CSS or something else)
 - [ ] do not include 'dist' to repository (generate 'dist' directory on every new set-up)
 - [ ] play/pause (basic control elements)
